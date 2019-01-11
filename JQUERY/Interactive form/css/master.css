@@ -1,0 +1,21 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+#mistake {
+    display: none;
+}
+form {
+    padding: 10px;
+}
+.titlegroup{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.statusmessage{
+    position: relative;
+    font-weight: bold;
+    font-size: 85%;
+    padding-top: 0.5%;
+}
