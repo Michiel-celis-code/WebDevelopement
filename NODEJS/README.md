@@ -1,44 +1,57 @@
 # SET UP SERVER / DEPENDENCIES
-
+### initiate project, creates packages.json
 ```
-npm init		(initiate project, creates packages.json)
+npm init
+```
+### install all packages listen in packages.json
+```
+npm istall
+```
+### install dependencies Adds to packages.json
+```
+npm install ...
+```
+### install dependencies globally And to packages.json
+```
+npm install -g ...
+```
+### install DEV dependency, also installs dependencies and their dependencies
+```
+npm install -D ...
+```
+### go into javascript console
+```
+node
+```
+### exit js console)
+```
+ctrl+C
 ```
 
-
-npm istall		(installs all packages listen in packages.json)
-npm install ... 	(install dependencies Adds to packages.json)
-npm install -g ... 	(install dependencies globally And to packages.json)
-
-npm install -D ... 	(install DEV dependency, also installs dependencies and their dependencies)
-
-node			(go into javascript console)
-ctrl+C			(exit js console)
-
-
-Packages : 
+## Packages
+```
 	nodemon 	(auto restart server on changes)
-
-
+```
 
 # IMPORT REQUIRE
-
-Make one file with an object
-______________________________ persons.js
+## Make a file `people.js` with an object
+```
 const person = {
 	name: 'john',
 	ages: 30
 };
 
 module.exports = person
+```
 
-
-require file and use object in other file.
-___________________________________________ index.js
+## require `person` in `index.js` and use object in other file.
+```
 const person = require('./person');
 console.log(person);
-
+```
 
 # OBJECT CONSTRUCTOR
+```
 class Layer {
 	constructor(name,age){
 		this.name = name;
@@ -49,30 +62,43 @@ class Layer {
 		console.log('my name is ${this.name} and i am ${this.age}');
 	}
 }
+```
 
 # WORK WITH PATHNAMES
 ## Full Path + filename
+```
 __filename
+```
 > path/directory/filename.js
 
 ## Base Filename
+```
 path.basename(__filename)
+```
 > filename.js
 
 ## File Extention
+```
 path.extname(__filename)
+```
 > .js
 
 ## Directory Path
+```
 __dirname
+```
 > path/directory
 
 ## Directory name
+```
 path.dirname(__filename)
+```
 > directory
 
 ## Object with all info
+```
 path.parse(__filename)
+```
 > {
 root: '/',
 dir: 'path/directory',
@@ -80,18 +106,23 @@ base: 'filename.js',
 ext: '.js',
 name: 'filename'
 }
-// Part of the object
+## Part of the object
+```
 path.parse(__filename).base
+```
 > filename.js
 
-## Create a path  			(Avoid / \ windows / \ problems)
+## Create a path  			(Avoid / \ problems)
+```
 path.join(__dirname,'test','test.js')
+```
 > path/dirname/test/test.js
 
-
 # FileSystem
+```
 const fs = require('fs');
 const path = require('path');
+```
 
 ## Create Folder
 fs.mkdir(path.join(__dirname,'/test'),{}, function(err){
