@@ -3,10 +3,12 @@
 ```
 npm init
 ```
-#### install all packages listen in packages.json
+> Initiates Project, Creates packages.json , ...
+#### install dependencies listen in packages.json
 ```
 npm istall
 ```
+> installs dependencies listen in packages.json
 #### install dependencies Adds to packages.json
 ```
 npm install ...
@@ -23,7 +25,7 @@ npm install -D ...
 ```
 node
 ```
-#### exit js console)
+#### exit javascript console
 ```
 ctrl+C
 ```
@@ -106,13 +108,11 @@ name: 'filename'
 path.parse(__filename).base
 ```
 > filename.js
-
 #### Create a path  			(Avoid / \ problems)
 ```
 path.join(__dirname,'test','test.js')
 ```
 > path/dirname/test/test.js
-
 # FileSystem
 ```
 const fs = require('fs');
