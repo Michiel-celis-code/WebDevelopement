@@ -1,40 +1,38 @@
 # SET UP SERVER / DEPENDENCIES
-### initiate project, creates packages.json
+#### initiate project, creates packages.json
 ```
 npm init
 ```
-### install all packages listen in packages.json
+#### install all packages listen in packages.json
 ```
 npm istall
 ```
-### install dependencies Adds to packages.json
+#### install dependencies Adds to packages.json
 ```
 npm install ...
 ```
-### install dependencies globally And to packages.json
+#### install dependencies globally And to packages.json
 ```
 npm install -g ...
 ```
-### install DEV dependency, also installs dependencies and their dependencies
+#### install DEV dependency, also installs dependencies and their dependencies
 ```
 npm install -D ...
 ```
-### go into javascript console
+#### go into javascript console
 ```
 node
 ```
-### exit js console)
+#### exit js console)
 ```
 ctrl+C
 ```
-
-## Packages
+### Packages
 ```
-	nodemon 	(auto restart server on changes)
+nodemon 	(auto restart server on changes)
 ```
-
 # IMPORT REQUIRE
-## Make a file `people.js` with an object
+### Make a file `people.js` with an object
 ```
 const person = {
 	name: 'john',
@@ -43,13 +41,11 @@ const person = {
 
 module.exports = person
 ```
-
-## require `person` in `index.js` and use object in other file.
+### require `person` in `index.js` and use object in other file.
 ```
 const person = require('./person');
 console.log(person);
 ```
-
 # OBJECT CONSTRUCTOR
 ```
 class Layer {
@@ -63,39 +59,38 @@ class Layer {
 	}
 }
 ```
-
-# WORK WITH PATHNAMES
-## Full Path + filename
+# Path
+#### Full Path + filename
 ```
 __filename
 ```
 > path/directory/filename.js
 
-## Base Filename
+#### Base Filename
 ```
 path.basename(__filename)
 ```
 > filename.js
 
-## File Extention
+#### File Extention
 ```
 path.extname(__filename)
 ```
 > .js
 
-## Directory Path
+#### Directory Path
 ```
 __dirname
 ```
 > path/directory
 
-## Directory name
+#### Directory name
 ```
 path.dirname(__filename)
 ```
 > directory
 
-## Object with all info
+#### Object with all info
 ```
 path.parse(__filename)
 ```
@@ -106,13 +101,13 @@ base: 'filename.js',
 ext: '.js',
 name: 'filename'
 }
-## Part of the object
+#### Part of the object
 ```
 path.parse(__filename).base
 ```
 > filename.js
 
-## Create a path  			(Avoid / \ problems)
+#### Create a path  			(Avoid / \ problems)
 ```
 path.join(__dirname,'test','test.js')
 ```
@@ -124,14 +119,14 @@ const fs = require('fs');
 const path = require('path');
 ```
 
-## Create Folder
+#### Create Folder
 ```
 fs.mkdir(path.join(__dirname,'/test'),{}, function(err){
 	if (err) throw err;
 		console.log('Folder created');
 });
 ```
-## Write File (ASYNC)
+#### Write File (ASYNC)
 ```
 fs.writefile(path.join(__dirname,'/test','hello.txt'),'Hello World!', function(err){
 	if (err) throw err;
