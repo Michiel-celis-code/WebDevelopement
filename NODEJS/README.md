@@ -1,4 +1,4 @@
-# SET UP SERVER / DEPENDENCIES
+# Setting up a NodeJS server
 ### npm init
 ```
 npm init
@@ -40,7 +40,7 @@ ctrl+C
 ```
 const person = {
 	name: 'john',
-	ages: 30
+	age: 30
 };
 
 module.exports = person
@@ -50,6 +50,7 @@ module.exports = person
 const person = require('./person');
 console.log(person);
 ```
+> {name: 'john',age: 30}
 # OBJECT CONSTRUCTOR
 ```
 class Layer {
@@ -63,6 +64,7 @@ class Layer {
 	}
 }
 ```
+> my name is john and i am 30
 # Path
 #### Full Path + filename
 ```
