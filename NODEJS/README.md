@@ -1,8 +1,8 @@
-############################################################
-SET UP SERVER / DEPENDENCIES
-############################################################
-npm init		(initiate project, creates packages.json)
+# SET UP SERVER / DEPENDENCIES
 
+```
+npm init		(initiate project, creates packages.json)
+```
 
 
 npm istall		(installs all packages listen in packages.json)
@@ -20,9 +20,8 @@ Packages :
 
 
 
-############################################################
-IMPORT
-############################################################
+# IMPORT REQUIRE
+
 Make one file with an object
 ______________________________ persons.js
 const person = {
@@ -39,9 +38,7 @@ const person = require('./person');
 console.log(person);
 
 
-############################################################
-OBJECT CONSTRUCTOR
-############################################################
+# OBJECT CONSTRUCTOR
 class Layer {
 	constructor(name,age){
 		this.name = name;
@@ -53,35 +50,28 @@ class Layer {
 	}
 }
 
-############################################################
-WORK WITH PATHNAMES
-############################################################
-
-// Full Path + filename
+# WORK WITH PATHNAMES
+## Full Path + filename
 __filename
 > path/directory/filename.js
 
-
-// Base Filename
+## Base Filename
 path.basename(__filename)
 > filename.js
 
-
-// File Extention
+## File Extention
 path.extname(__filename)
 > .js
 
-
-// Directory Path
+## Directory Path
 __dirname
 > path/directory
 
-
-// Directory name
+## Directory name
 path.dirname(__filename)
 > directory
 
-// Object with all info
+## Object with all info
 path.parse(__filename)
 > {
 root: '/',
@@ -94,24 +84,22 @@ name: 'filename'
 path.parse(__filename).base
 > filename.js
 
-// Create a path  			(Avoid / \ windows / \ problems)
+## Create a path  			(Avoid / \ windows / \ problems)
 path.join(__dirname,'test','test.js')
 > path/dirname/test/test.js
 
 
-############################################################
-FileSystem
-############################################################
+# FileSystem
 const fs = require('fs');
 const path = require('path');
 
-//Create Folder
+## Create Folder
 fs.mkdir(path.join(__dirname,'/test'),{}, function(err){
 	if (err) throw err;
 		console.log('Folder created');
 });
 
-// Write File (ASYNC)
+## Write File (ASYNC)
 fs.writefile(path.join(__dirname,'/test','hello.txt'),'Hello World!', function(err){
 	if (err) throw err;
 		console.log('File OverWritten');
@@ -124,19 +112,19 @@ fs.writefile(path.join(__dirname,'/test','hello.txt'),'Hello World!', function(e
 
 });
 
-// Append File (ASYNC)
+## Append File (ASYNC)
 fs.appendfile(path.join(__dirname,'/test','hello.txt'),'Add stuff!', function(err){
 	if (err) throw err;
 		console.log('File Appended');
 });
 
-// Read File
+## Read File
 fs.readFile(path.join(__dirname,'/test','hello.txt'),'utf8', function(err,data){
 	if (err) throw err;
 		console.log(data);
 });
 
-// Rename File
+## Rename File
 fs.rename(path.join(__dirname,'/test','hello.txt'),path.join(__dirname,'/test','renamedfile.txt'), function(err,data){
 	if (err) throw err;
 		console.log('file renamed');
