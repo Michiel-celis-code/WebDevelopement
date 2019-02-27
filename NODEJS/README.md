@@ -1,38 +1,40 @@
 # SET UP SERVER / DEPENDENCIES
-#### initiate project, creates packages.json
+### npm init
 ```
 npm init
 ```
 > Initiates Project, Creates packages.json , ...
-#### install dependencies listen in packages.json
+### npm install
 ```
 npm istall
 ```
 > installs dependencies listen in packages.json
-#### install dependencies Adds to packages.json
 ```
 npm install ...
 ```
-#### install dependencies globally And to packages.json
+> install ..., Adds to packages.json
 ```
 npm install -g ...
 ```
-#### install DEV dependency, also installs dependencies and their dependencies
+> install dependencies globally
 ```
 npm install -D ...
 ```
-#### go into javascript console
-```
-node
-```
-#### exit javascript console
-```
-ctrl+C
-```
-### Packages
+> install DEV dependency, also installs dependencies and their dependencies.
+### npm Packages
 ```
 nodemon 	(auto restart server on changes)
 ```
+### Node Console
+```
+node
+```
+> go into javascript console
+```
+ctrl+C
+```
+> exit javascript console
+
 # IMPORT REQUIRE
 ### Make a file `people.js` with an object
 ```
